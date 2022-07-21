@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lslauncher.LsTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-07-21T09:16:59" hostname="ULYSSESPC" time="0.197">
+  <properties/>
+  <testcase name="printTest()" classname="lslauncher.LsTests" time="0.084"/>
+  <testcase name="outputTest()" classname="lslauncher.LsTests" time="0.076"/>
+  <testcase name="throwTest()" classname="lslauncher.LsTests" time="0.006"/>
+  <testcase name="setSizesTest()" classname="lslauncher.LsTests" time="0.028"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

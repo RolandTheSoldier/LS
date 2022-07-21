@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'ConsoleUtils'
+version '5.2'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.kohsuke.args4j:args4j-maven-plugin:2.33'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.11'
+    testImplementation platform('org.junit:junit-bom:5.8.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    manifest {
+        attributes 'Main-Class': 'lslauncher.LsLauncher'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+application {
+    mainClassName = 'lslauncher.LsLauncher'
+}
+
+
+test {
+    useJUnitPlatform()
+}
